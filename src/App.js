@@ -11,7 +11,7 @@ const App = () => {
         <GameProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Layout />}>
+                    <Route path="/iCoin/" element={<Layout />}>
                         <Route index element={<Main />}></Route>
                         <Route path="boost" element={<Boost />}></Route>
                         <Route path="earn" element={<Earn />}></Route>

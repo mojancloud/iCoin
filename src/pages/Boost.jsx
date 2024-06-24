@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { GameContext } from '../GameContext';
 import upgradeConfig from '../upgradeConfig';
+import Counter from '../components/Counter';
 
 const Boost = () => {
     const {
@@ -18,40 +19,39 @@ const Boost = () => {
     const rechargingSpeedUpgrade = upgradeConfig.rechargingSpeed[rechargingSpeedLevel];
 
     return (
-        <div>
-            <h1>Boost</h1>
-            <p>Score: {score}</p>
-            <div>
-                <h2>Energy Limit Upgrade</h2>
-                <p>Current Level: {energyLimitLevel}</p>
+        <div className="boost-container">
+            <Counter score={score} />
+            <div className="upgrade-section">
+                <h2 className="upgrade-title">Energy Limit Upgrade</h2>
+                <p className="upgrade-level">Current Level: {energyLimitLevel}</p>
                 {energyLimitUpgrade ? (
-                    <button onClick={upgradeEnergyLimit}>
+                    <button className="upgrade-button" onClick={upgradeEnergyLimit}>
                         Upgrade Energy Limit (Cost: {energyLimitUpgrade.cost}, Benefit: +{energyLimitUpgrade.benefit})
                     </button>
                 ) : (
-                    <p>Energy Limit is fully upgraded.</p>
+                    <p className="upgrade-info">Energy Limit is fully upgraded.</p>
                 )}
             </div>
-            <div>
-                <h2>Multi Tap Upgrade</h2>
-                <p>Current Level: {multiTapLevel}</p>
+            <div className="upgrade-section">
+                <h2 className="upgrade-title">Multi Tap Upgrade</h2>
+                <p className="upgrade-level">Current Level: {multiTapLevel}</p>
                 {multiTapUpgrade ? (
-                    <button onClick={upgradeMultiTap}>
+                    <button className="upgrade-button" onClick={upgradeMultiTap}>
                         Upgrade Multi Tap (Cost: {multiTapUpgrade.cost}, Benefit: +{multiTapUpgrade.benefit})
                     </button>
                 ) : (
-                    <p>Multi Tap is fully upgraded.</p>
+                    <p className="upgrade-info">Multi Tap is fully upgraded.</p>
                 )}
             </div>
-            <div>
-                <h2>Recharging Speed Upgrade</h2>
-                <p>Current Level: {rechargingSpeedLevel}</p>
+            <div className="upgrade-section">
+                <h2 className="upgrade-title">Recharging Speed Upgrade</h2>
+                <p className="upgrade-level">Current Level: {rechargingSpeedLevel}</p>
                 {rechargingSpeedUpgrade ? (
-                    <button onClick={upgradeRechargingSpeed}>
+                    <button className="upgrade-button" onClick={upgradeRechargingSpeed}>
                         Upgrade Recharging Speed (Cost: {rechargingSpeedUpgrade.cost}, Benefit: +{rechargingSpeedUpgrade.benefit})
                     </button>
                 ) : (
-                    <p>Recharging Speed is fully upgraded.</p>
+                    <p className="upgrade-info">Recharging Speed is fully upgraded.</p>
                 )}
             </div>
         </div>

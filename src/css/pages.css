@@ -116,7 +116,61 @@
 .boost-container {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.boost-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.boost-score {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.upgrade-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #f9f9f9;
+}
+
+.upgrade-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.upgrade-level {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.upgrade-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upgrade-button:hover {
+    background-color: #0056b3;
+}
+
+.upgrade-info {
+    font-size: 1rem;
+    color: #555;
+}
+
 
 .boost {
     height: 100%;
@@ -126,6 +180,9 @@
     justify-content: center;
 }
 
+
+/* BOOST PAGE */
+/* BOOST PAGE */
 .earn-container {
     height: 100%;
     width: 100%;

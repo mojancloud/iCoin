@@ -16,15 +16,28 @@ const Navbar = () => {
     return (
         <nav className="navbar-container">
             <div className="navbar">
-                <NavLink to="/boost" className="navbar-items" activeClassName="active" onClick={handleClick}>
+                <NavLink 
+                    to="/iCoin/boost/" 
+                    className={({ isActive }) => isActive ? "navbar-items active" : "navbar-items"} 
+                    onClick={handleClick}
+                >
                     <RocketLaunchRounded className="material-icons" />
                     <p>boost</p>
                 </NavLink>
-                <NavLink exact to="/" className="navbar-items" activeClassName="active" onClick={handleClick}>
+                <NavLink 
+                    to="/iCoin/" 
+                    end // This ensures exact match for the root path
+                    className={({ isActive }) => isActive ? "navbar-items active" : "navbar-items"} 
+                    onClick={handleClick}
+                >
                     <HomeRounded className="material-icons" />
                     <p>iCoin</p>
                 </NavLink>
-                <NavLink to="/earn" className="navbar-items" activeClassName="active" onClick={handleClick}>
+                <NavLink 
+                    to="/iCoin/earn/" 
+                    className={({ isActive }) => isActive ? "navbar-items active" : "navbar-items"} 
+                    onClick={handleClick}
+                >
                     <PaidRounded className="material-icons" />
                     <p>Earn</p>
                 </NavLink>

@@ -10,7 +10,7 @@ const Main = () => {
 
     return (
         <div className="main">
-            <Counter count={score} coinTouched={coinTouched} />
+            <Counter score={score} coinTouched={coinTouched} />
             <Coin incrementCount={handleTap} disabled={energy <= 0} />
             <div className='energy-container'>
                 <Energy energy={energy} energyLimit={energyLimit} />

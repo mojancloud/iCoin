@@ -1,9 +1,9 @@
 import React from 'react';
 import coin from '../assets/coin.png';
 
-const Counter = ({ count, coinTouched }) => {
+const Counter = ({ score, coinTouched }) => {
     // Format count with thousand separator in English
-    const formattedCount = new Intl.NumberFormat('en-US').format(count);
+    const formattedCount = new Intl.NumberFormat('en-US').format(score);
 
     return (
         <div className="counter-container">
