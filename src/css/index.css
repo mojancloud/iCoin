@@ -25,11 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.pages {
-    height: 85%;
-    width: 100%;
+    position: relative;
 }
 
 @media screen and (min-width: 764px) {

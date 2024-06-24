@@ -6,9 +6,7 @@ import "../css/pages.css";
 const Layout = () => {
     return (
         <div className="layout">
-            <div className="pages">
-                <Outlet />
-            </div>
+            <Outlet />
             <Navbar />
         </div>
     );
