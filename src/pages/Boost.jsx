@@ -20,39 +20,43 @@ const Boost = () => {
 
     return (
         <div className="boost-container">
-            <Counter score={score} />
-            <div className="upgrade-section">
-                <h2 className="upgrade-title">Energy Limit Upgrade</h2>
-                <p className="upgrade-level">Current Level: {energyLimitLevel}</p>
-                {energyLimitUpgrade ? (
-                    <button className="upgrade-button" onClick={upgradeEnergyLimit}>
-                        Upgrade Energy Limit (Cost: {energyLimitUpgrade.cost}, Benefit: +{energyLimitUpgrade.benefit})
-                    </button>
-                ) : (
-                    <p className="upgrade-info">Energy Limit is fully upgraded.</p>
-                )}
+            <div className='boost-counter'>
+                <Counter score={score} />
             </div>
-            <div className="upgrade-section">
-                <h2 className="upgrade-title">Multi Tap Upgrade</h2>
-                <p className="upgrade-level">Current Level: {multiTapLevel}</p>
-                {multiTapUpgrade ? (
-                    <button className="upgrade-button" onClick={upgradeMultiTap}>
-                        Upgrade Multi Tap (Cost: {multiTapUpgrade.cost}, Benefit: +{multiTapUpgrade.benefit})
-                    </button>
-                ) : (
-                    <p className="upgrade-info">Multi Tap is fully upgraded.</p>
-                )}
-            </div>
-            <div className="upgrade-section">
-                <h2 className="upgrade-title">Recharging Speed Upgrade</h2>
-                <p className="upgrade-level">Current Level: {rechargingSpeedLevel}</p>
-                {rechargingSpeedUpgrade ? (
-                    <button className="upgrade-button" onClick={upgradeRechargingSpeed}>
-                        Upgrade Recharging Speed (Cost: {rechargingSpeedUpgrade.cost}, Benefit: +{rechargingSpeedUpgrade.benefit})
-                    </button>
-                ) : (
-                    <p className="upgrade-info">Recharging Speed is fully upgraded.</p>
-                )}
+            <div className='boost-upgrade'>
+                <div className="upgrade-section">
+                    <h2 className="upgrade-title">Energy Limit Upgrade</h2>
+                    <p className="upgrade-level">Current Level: {energyLimitLevel}</p>
+                    {energyLimitUpgrade ? (
+                        <button className="upgrade-button" onClick={upgradeEnergyLimit}>
+                            Upgrade Energy Limit (Cost: {energyLimitUpgrade.cost}, Benefit: +{energyLimitUpgrade.benefit})
+                        </button>
+                    ) : (
+                        <p className="upgrade-info">Energy Limit is fully upgraded.</p>
+                    )}
+                </div>
+                <div className="upgrade-section">
+                    <h2 className="upgrade-title">Multi Tap Upgrade</h2>
+                    <p className="upgrade-level">Current Level: {multiTapLevel}</p>
+                    {multiTapUpgrade ? (
+                        <button className="upgrade-button" onClick={upgradeMultiTap}>
+                            Upgrade Multi Tap (Cost: {multiTapUpgrade.cost}, Benefit: +{multiTapUpgrade.benefit})
+                        </button>
+                    ) : (
+                        <p className="upgrade-info">Multi Tap is fully upgraded.</p>
+                    )}
+                </div>
+                <div className="upgrade-section">
+                    <h2 className="upgrade-title">Recharging Speed Upgrade</h2>
+                    <p className="upgrade-level">Current Level: {rechargingSpeedLevel}</p>
+                    {rechargingSpeedUpgrade ? (
+                        <button className="upgrade-button" onClick={upgradeRechargingSpeed}>
+                            Upgrade Recharging Speed (Cost: {rechargingSpeedUpgrade.cost}, Benefit: +{rechargingSpeedUpgrade.benefit})
+                        </button>
+                    ) : (
+                        <p className="upgrade-info">Recharging Speed is fully upgraded.</p>
+                    )}
+                </div>
             </div>
         </div>
     );

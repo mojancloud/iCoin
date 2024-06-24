@@ -119,26 +119,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.boost-header {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.boost-counter {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.boost-score {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.boost-upgrade {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .upgrade-section {
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-    background-color: #f9f9f9;
+    width: 90%;
+    background-color: rgba(51, 51, 51, 0.5);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 .upgrade-title {
@@ -148,13 +157,12 @@
 
 .upgrade-level {
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
 .upgrade-button {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #007bff;
+    background-color: rgba(241, 158, 54, 0.85);
     color: white;
     border: none;
     border-radius: 5px;
@@ -163,12 +171,12 @@
 }
 
 .upgrade-button:hover {
-    background-color: #0056b3;
+    background-color: rgba(241, 158, 54, 1);
 }
 
 .upgrade-info {
     font-size: 1rem;
-    color: #555;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -181,8 +189,8 @@
 }
 
 
-/* BOOST PAGE */
-/* BOOST PAGE */
+/* EARN PAGE */
+/* EARN PAGE */
 .earn-container {
     height: 100%;
     width: 100%;
