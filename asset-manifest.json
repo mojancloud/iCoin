@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/iCoin/static/css/main.87be63e4.css",
+    "main.js": "/iCoin/static/js/main.6ff978ab.js",
+    "static/media/golden.png": "/iCoin/static/media/golden.ccce305601b950d83942.png",
+    "static/media/coin.png": "/iCoin/static/media/coin.a810f86b2b53859f09e9.png",
+    "static/media/thunder.png": "/iCoin/static/media/thunder.89f691e509f53780c4ac.png",
+    "index.html": "/iCoin/index.html",
+    "main.87be63e4.css.map": "/iCoin/static/css/main.87be63e4.css.map",
+    "main.6ff978ab.js.map": "/iCoin/static/js/main.6ff978ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87be63e4.css",
+    "static/js/main.6ff978ab.js"
+  ]
+}
