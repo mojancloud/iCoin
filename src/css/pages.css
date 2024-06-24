@@ -1,0 +1,144 @@
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: radial-gradient(circle, rgba(241, 158, 54, 0.85) 0%, rgba(0, 0, 0, 0) 75%);
+}
+
+.coin-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.plus-num {
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    pointer-events: none;
+    animation: fadeOutUp 1s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
+
+.counter-container {
+    width: 100%;
+    font-size: 2.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.counter-container img {
+    transition: transform 0.1s ease;
+}
+
+.counter-container img.coin-enlarged {
+    transform: scale(1.25);
+}
+
+.energy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+.energy {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.energy-count {
+    display: flex;
+    flex-direction: column;
+}
+
+.energy-count span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.gray {
+    color: #d7d7d798 !important;
+    font-size: 0.75rem !important;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(218, 218, 218, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(278deg, rgba(253, 237, 201, 1) 2%, rgba(241, 158, 54, 1) 52%, rgba(185, 103, 0, 1) 88%);
+    width: 0;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(253, 237, 201, 0.5),
+        0 0 10px rgba(241, 158, 54, 0.5),
+        0 0 15px rgba(185, 103, 0, 0.5);
+}
+
+/* BOOST PAGE */
+/* BOOST PAGE */
+.boost-container {
+    height: 100%;
+    width: 100%;
+}
+
+.boost {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.earn-container {
+    height: 100%;
+    width: 100%;
+}
+
+.earn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.earn p {
+    font-size: 2.5rem;
+}
