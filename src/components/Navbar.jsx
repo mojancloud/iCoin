@@ -8,7 +8,7 @@ const Navbar = () => {
         // Check if the device supports vibration
         if ("vibrate" in navigator) {
             // Vibrate for 50ms
-            navigator.vibrate(50);
+            navigator.vibrate(5);
         }
     };
 
