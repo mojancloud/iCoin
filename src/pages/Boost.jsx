@@ -21,6 +21,7 @@ const Boost = () => {
     return (
         <div className="boost-container">
             <div className='boost-counter'>
+                <p>Your score:</p>
                 <Counter score={score} />
             </div>
             <div className='boost-upgrade'>
@@ -57,6 +58,43 @@ const Boost = () => {
                         <p className="upgrade-info">Recharging Speed is fully upgraded.</p>
                     )}
                 </div>
+
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div><div className='upgrade-section'>
+                    
+                </div>
+                <div className='upgrade-section'>
+                    
+                </div>
+
             </div>
         </div>
     );

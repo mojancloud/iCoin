@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { RocketLaunchRounded, HomeRounded, PaidRounded } from "@mui/icons-material";
-import "../css/navbar.css";
 
 const Navbar = () => {
     // Function to handle click and trigger vibration

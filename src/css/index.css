@@ -1,7 +1,7 @@
+/* CSS */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     box-sizing: border-box;
     -webkit-user-drag: none;
     -webkit-user-select: none;
@@ -9,27 +9,302 @@
     cursor: default;
 }
 
-body {
+body, html {
     background: black;
     color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#root {
+    height: 100%;
 }
 
 .layout {
+    height: 100%;
     background: repeating-linear-gradient(
         45deg, 
-        #202020, 
-        #202020 10px, 
-        #1a1a1a 10px, 
-        #1a1a1a 20px);
-    height: 100vh;
+        rgba(32, 32, 32, 0.5), 
+        rgba(32, 32, 32, 0.5) 10px, 
+        rgba(26, 26, 26, 0.5) 10px, 
+        rgba(26, 26, 26, 0.5) 20px
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* */
+.main {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: radial-gradient(circle, rgba(241, 158, 54, 0.851) 0%, rgba(0, 0, 0, 0) 75%);
+}
+
+.coin-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.plus-num {
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    pointer-events: none;
+    animation: fadeOutUp 1s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
+
+.counter-container {
+    width: 100%;
+    font-size: 2.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.counter-container img {
+    transition: transform 0.1s ease;
+}
+
+.counter-container img.coin-enlarged {
+    transform: scale(1.25);
+}
+
+.energy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+.energy {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.energy-count {
+    display: flex;
+    flex-direction: column;
+}
+
+.energy-count span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.gray {
+    color: #d7d7d798 !important;
+    font-size: 0.75rem !important;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(218, 218, 218, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(278deg, rgba(253, 237, 201, 1) 2%, rgba(241, 158, 54, 1) 52%, rgba(185, 103, 0, 1) 88%);
+    width: 0;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(253, 237, 201, 0.5),
+                0 0 10px rgba(241, 158, 54, 0.5),
+                0 0 15px rgba(185, 103, 0, 0.5);
+}
+
+
+/* BOOST PAGE */
+.boost-container {
+    overflow: auto;
+    height: 90%;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
+}
+
+.boost-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 16px;
+}
+
+.boost-counter p:first-child {
+    color: #c1c1c1;
+}
+
+.boost-upgrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.upgrade-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    background-color: rgba(51, 51, 51, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.upgrade-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.upgrade-level {
+    margin-bottom: 10px;
+}
+
+.upgrade-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgba(241, 158, 54, 0.85);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upgrade-button:hover {
+    background-color: rgba(241, 158, 54, 1);
+}
+
+.upgrade-info {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* EARN PAGE */
+.earn-container {
+    height: 90%;
+    width: 100%;
+}
+
+.earn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.earn p {
+    font-size: 2.5rem;
+}
+
+/* NAVBAR */
+.navbar-container {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(51, 51, 51, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    border-radius: 32px;
+}
+
+.navbar-items {
+    height: 65%;
+    width: 22.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    border-radius: 16px;
+}
+
+.material-icons {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 2rem !important;
+}
+
+.navbar-items p {
+    font-size: 0.75rem;
+}
+
+.navbar-items.active {
+    color: white;
+    background: rgba(218, 218, 218, 0.1);
+    transform: scale(1.25);
+}
+
+.navbar-items.active .material-icons {
+    color: white; 
 }
 
 @media screen and (min-width: 764px) {
-    .layout {
+    .layout, .main, .boost-container, .navbar {
         max-width: 450px;
         margin: 0 auto;
         background-size: 450px;
