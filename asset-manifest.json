@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/iCoin/static/css/main.ee07b64a.css",
-    "main.js": "/iCoin/static/js/main.ec9d4110.js",
+    "main.css": "/iCoin/static/css/main.2b93415e.css",
+    "main.js": "/iCoin/static/js/main.f884cb57.js",
     "static/media/golden.png": "/iCoin/static/media/golden.ccce305601b950d83942.png",
     "static/media/coin.png": "/iCoin/static/media/coin.a810f86b2b53859f09e9.png",
     "static/media/thunder.png": "/iCoin/static/media/thunder.89f691e509f53780c4ac.png",
     "index.html": "/iCoin/index.html",
-    "main.ee07b64a.css.map": "/iCoin/static/css/main.ee07b64a.css.map",
-    "main.ec9d4110.js.map": "/iCoin/static/js/main.ec9d4110.js.map"
+    "main.2b93415e.css.map": "/iCoin/static/css/main.2b93415e.css.map",
+    "main.f884cb57.js.map": "/iCoin/static/js/main.f884cb57.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee07b64a.css",
-    "static/js/main.ec9d4110.js"
+    "static/css/main.2b93415e.css",
+    "static/js/main.f884cb57.js"
   ]
 }
