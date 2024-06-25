@@ -33,12 +33,51 @@ img {
         rgba(32, 32, 32, 0.5) 10px, 
         rgba(26, 26, 26, 0.5) 10px, 
         rgba(26, 26, 26, 0.5) 20px
-    );
+    ), linear-gradient(0deg, rgba(157,101,30,0.5) 5%, rgba(0,0,0,1) 45%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
 }
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.prompt-container {
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(51, 51, 51, 0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    padding: 1.75rem 1rem;
+    border-radius: 32px;
+    animation: fadeInOut 5s ease-in-out;
+}
+
+.prompt p {
+    font-size: 2.5rem;
+}
+
 
 
 /* */
@@ -50,7 +89,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: radial-gradient(circle, rgba(241, 158, 54, 0.85) 0%, rgba(0, 0, 0, 0) 75%);
+    background: radial-gradient(circle, rgba(241, 158, 54, 1) 0%, rgba(0, 0, 0, 0) 75%);
 }
 
 .coin-container {
@@ -176,7 +215,7 @@ img {
     color: #c1c1c1;
 }
 
-.test {
+.boost {
     margin: 20px;
     background-color: rgba(51, 51, 51, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -209,8 +248,8 @@ img {
 }
 
 .upgrade-section-1 div:first-child {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,8 +296,10 @@ img {
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 16px;
 }
 
 .earn p {
@@ -290,7 +331,7 @@ img {
 }
 
 .navbar-items {
-    height: 68.5%;
+    height: 70%;
     width: 23.5%;
     display: flex;
     flex-direction: column;
@@ -323,7 +364,7 @@ img {
 }
 
 @media screen and (min-width: 764px) {
-    .layout, .main, .boost-container, .navbar {
+    .layout, .main, .boost-container, .navbar, .prompt-container {
         max-width: 450px;
         margin: 0 auto;
         background-size: 450px;

@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import upgradeConfig from './upgradeConfig';
+import { usePrompt } from './PromptContext';
 
 const GameContext = createContext();
 
@@ -45,6 +46,8 @@ const GameProvider = ({ children }) => {
     });
 
     const [coinTouched, setCoinTouched] = useState(false);
+
+    const { showPrompt } = usePrompt();
 
     // Save to local storage whenever relevant state changes
     useEffect(() => {
@@ -141,7 +144,12 @@ const GameProvider = ({ children }) => {
                 setScore(prevScore => prevScore - cost);
                 setEnergyLimit(prevLimit => prevLimit + benefit);
                 setEnergyLimitLevel(prevLevel => prevLevel + 1);
+                showPrompt('Energy Limit Upgraded!');
+            } else {
+                showPrompt('Not enough score to upgrade Energy Limit.');
             }
+        } else {
+            showPrompt('Energy Limit is already at max level.');
         }
     };
 
@@ -152,7 +160,12 @@ const GameProvider = ({ children }) => {
                 setScore(prevScore => prevScore - cost);
                 setMultiTap(prevMultiTap => prevMultiTap + benefit);
                 setMultiTapLevel(prevLevel => prevLevel + 1);
+                showPrompt('Multi Tap Upgraded!');
+            } else {
+                showPrompt('Not enough score to upgrade Multi Tap.');
             }
+        } else {
+            showPrompt('Multi Tap is already at max level.');
         }
     };
 
@@ -163,7 +176,12 @@ const GameProvider = ({ children }) => {
                 setScore(prevScore => prevScore - cost);
                 setRechargingSpeed(prevSpeed => prevSpeed + benefit);
                 setRechargingSpeedLevel(prevLevel => prevLevel + 1);
+                showPrompt('Recharging Speed Upgraded!');
+            } else {
+                showPrompt('Not enough score to upgrade Recharging Speed.');
             }
+        } else {
+            showPrompt('Recharging Speed is already at max level.');
         }
     };
 
